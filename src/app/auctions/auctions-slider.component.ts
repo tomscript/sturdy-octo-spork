@@ -42,10 +42,10 @@ export class AuctionsSliderComponent implements OnInit, OnDestroy {
       const els = this.document.getElementsByClassName("outer");
       // If commented out w/ngSkipHydration will hydrate
       // If not commented out w/ngSkipHydration will not hydrate
-      // this.id = setInterval(
-      //   () => (this.index = (this.index + 1) % els.length),
-      //   10_000
-      // );
+      this.id = setInterval(
+        () => (this.index = (this.index + 1) % els.length),
+        10_000
+      );
       console.log("commented out - should hyrdate");
     }
     console.log("foo");

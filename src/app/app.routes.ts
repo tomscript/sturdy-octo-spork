@@ -1,9 +1,12 @@
-import { Routes } from '@angular/router';
-import { AuctionsComponent } from './auctions/auctions.component';
+import { Routes } from "@angular/router";
 
 export const routes: Routes = [
   {
-    path: '',
-    component: AuctionsComponent,
+    path: "",
+    loadComponent: import("./auctions/auctions.component"),
+  },
+  {
+    path: "bar",
+    loadComponent: () => import("./auctions/auctions.component"),
   },
 ];
